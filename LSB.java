@@ -1,35 +1,34 @@
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class LSB {
-    BufferedImage imagen;
 
-    {
-        try {
-            imagen = ImageIO.read(new File("download.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    BufferedImage imagen;
+    int[][] lsba;
+
+    public LSB(BufferedImage imagen) {
+        this.imagen = imagen;
+        this.lsba = new int[3][imagen.getWidth() * imagen.getHeight()];
+    }
+
+    public int[][] OperacionLSB() {
+        int i = 0;
 
         for (int y = 0; y < imagen.getHeight(); y++) {
             for (int x = 0; x < imagen.getWidth(); x++) {
-
                 int rgb = imagen.getRGB(x, y);
 
-                int rojo = ((rgb >> 16) & 255) & 1;
-                int verde = ((rgb >> 8) & 255) & 1;
-                int azul = (rgb & 255) & 1;
+                int LSBrojo = ((rgb >> 16) & 255) & 1;
+                int LSBverde = ((rgb >> 8) & 255) & 1;
+                int LSBazul = (rgb & 255) & 1;
 
+                lsba[0][i] = LSBrojo;
+                lsba[1][i] = LSBverde;
+                lsba[2][i] = LSBazul;
 
-
-
+                i++;
             }
         }
 
-
+        return lsba;
     }
-
-
 }
