@@ -11,9 +11,9 @@ public class Mensaje {
         this.mensaje = mensaje;
         this.largo = mensaje.length();
         this.bytemensaje = mensaje.getBytes();
-        this.bits = new int[3][(int) Math.ceil(mensaje.length() * 8.0 / 3.0)];
-        this.columnas = this.bits[0].length;
-        this.filas = 3;
+        this.bits = new int[(int) Math.ceil(mensaje.length() * 8.0 / 3.0)][3];
+        this.filas = this.bits.length;
+        this.columnas = 3;
     }
 
     int[][] operacion() {
@@ -25,17 +25,14 @@ public class Mensaje {
                 int bit = (b >> i) & 1;
 
                 bits[fila][columna] = bit;
-                columna++;
+                fila++;
 
-                if (columna == columnas) {
-                    fila++;
-                    columna = 0;
-
+                if (fila == filas) {
+                    fila = 0;
+                    columna++;
                 }
             }
-
         }
         return bits;
     }
-
 }

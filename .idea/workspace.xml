@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f1fc36e-e959-4694-ad36-1d179fb0210b" name="Changes" comment="procesamiento del mensaje">
-      <change afterPath="$PROJECT_DIR$/Ocultarmensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSB.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mensaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ocultarmensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ocultarmensaje.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +85,30 @@
       <option name="project" value="LOCAL" />
       <updated>1684091118681</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="procesamiento del mensaje">
+      <created>1684094907415</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684094907415</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Extractor de LSB" />
     <MESSAGE value="procesamiento del mensaje" />
     <option name="LAST_COMMIT_MESSAGE" value="procesamiento del mensaje" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

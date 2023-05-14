@@ -24,7 +24,6 @@ public class LSB {
 
                 rgb = (LSBrojo << 16) | (LSBverde << 8) | LSBazul;
                 Color color = Color.getColor(String.valueOf(rgb));
-                imagen.setRGB(x, y, rgb);
 
             }
         }

@@ -17,21 +17,26 @@ public class Ocultarmensaje {
                 for (int i = 0; i < bits.length; i++) {
                     for (int j = 0; j < bits[i].length; j++) {
 
-                        int bit = bits[i][j];
-                        int rgb = imagen.getRGB(x, y);
-                        int LSBrojo = ((rgb >> 16) & 254) | bit;
-                        int LSBverde = ((rgb >> 8) & 254) | bit;
-                        int LSBazul = (rgb & 254) | bit;
+                        int bit = bits[j][i];
+                        if (x >= 0 && x < imagen.getWidth() && y >= 0 && y < imagen.getHeight()) {
+                            int rgb = imagen.getRGB(x, y);
 
-                        rgb = (LSBrojo << 16) | (LSBverde << 8) | LSBazul;
-                        Color color = Color.getColor(String.valueOf(rgb));
-                        imagen.setRGB(x, y, rgb);
+                            int LSBrojo = ((rgb >> 16 & 254) | bits[0][i]);
+                            int LSBverde = ((rgb >> 8 & 254) | (bits[1][i]));
+                            int LSBazul = (rgb & 254) | bits[2][i];
 
-                        System.out.println(bits[i][j]);
-                        System.out.println("rojo" + Integer.toBinaryString(LSBrojo));
-                        System.out.println("verde" + Integer.toBinaryString(LSBverde));
-                        System.out.println("azul" + Integer.toBinaryString(LSBazul));
+                            rgb = (LSBrojo << 16) | (LSBverde << 8) | LSBazul;
+                            Color color = Color.getColor(String.valueOf(rgb));
 
+                            imagen.setRGB(x, y, rgb);
+
+                            x++;
+
+                            if (x == imagen.getWidth()) {
+                                x = 0;
+                                y++;
+                            }
+                        }
                     }
                 }
             }
