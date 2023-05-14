@@ -19,16 +19,13 @@ public class Main {
         String mensaje = teclado.nextLine();
 
         Mensaje mensaje1 = new Mensaje(mensaje);
-
-
-        LSB lsb = new LSB(imagen);
-
         int[][] bits = mensaje1.operacion();
 
-        for (int i = 0; i < bits.length; i++) {
-            for (int j = 0; j < bits[i].length; j++) {
-                System.out.print(bits[i][j]);
-            }
-        }
+        LSB lsb = new LSB(imagen);
+        imagen = lsb.OperacionLSB();
+
+        Ocultarmensaje mensajeoculto = new Ocultarmensaje(imagen,bits);
+        mensajeoculto.operacion();
+
     }
 }

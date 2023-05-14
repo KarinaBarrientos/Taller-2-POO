@@ -11,8 +11,7 @@ public class LSB {
         this.imagen = imagen;
     }
 
-    public void OperacionLSB() {
-        int i = 0;
+    public BufferedImage OperacionLSB() {
 
         for (int y = 0; y < imagen.getHeight(); y++) {
             for (int x = 0; x < imagen.getWidth(); x++) {
@@ -29,5 +28,6 @@ public class LSB {
 
             }
         }
+        return imagen;
     }
 }
