@@ -48,7 +48,7 @@ public class Ocultarmensaje {
 
         File imagenconsecreto = new File("imagenconsecreto.png");
         try {
-            File codificado=new File(String.valueOf(ImageIO.write(imagen,"png",imagenconsecreto)));
+            File codificado = new File(String.valueOf(ImageIO.write(imagen, "png", imagenconsecreto)));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
