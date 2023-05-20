@@ -21,12 +21,12 @@ public class Ocultarmensaje {
                         if (x >= 0 && x < imagen.getWidth() && y >= 0 && y < imagen.getHeight()) {
                             int rgb = imagen.getRGB(x, y);
 
-                            int LSBrojo = ((rgb >> 16 & 254) | bits[0][i]);
-                            int LSBverde = ((rgb >> 8 & 254) | (bits[1][i]));
-                            int LSBazul = (rgb & 254) | bits[2][i];
+                            int LSBalpha = ((rgb >> 24 & 254) | bits[i][0]);
+                            int LSBrojo = ((rgb >> 16 & 254) | bits[i][1]);
+                            int LSBverde = ((rgb >> 8 & 254) | bits[i][2]);
+                            int LSBazul = ((rgb & 254) | bits[i][3]);
 
-                            rgb = (LSBrojo << 16) | (LSBverde << 8) | LSBazul;
-                            Color color = Color.getColor(String.valueOf(rgb));
+                            rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
 
                             imagen.setRGB(x, y, rgb);
 

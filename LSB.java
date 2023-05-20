@@ -5,7 +5,6 @@ import java.io.File;
 public class LSB {
 
     BufferedImage imagen;
-    File imagensalida;
 
     public LSB(BufferedImage imagen) {
         this.imagen = imagen;
@@ -18,13 +17,13 @@ public class LSB {
 
                 int rgb = imagen.getRGB(x, y);
 
+                int LSBalpha = ((rgb >> 24) & 254);
                 int LSBrojo = ((rgb >> 16) & 254);
                 int LSBverde = ((rgb >> 8) & 254);
                 int LSBazul = (rgb & 254);
 
-                rgb = (LSBrojo << 16) | (LSBverde << 8) | LSBazul;
-                Color color = Color.getColor(String.valueOf(rgb));
-
+                rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
+                imagen.setRGB(x, y, rgb);
             }
         }
         return imagen;
