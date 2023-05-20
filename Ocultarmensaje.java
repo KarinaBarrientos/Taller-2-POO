@@ -1,5 +1,8 @@
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Ocultarmensaje {
     BufferedImage imagen;
@@ -17,7 +20,6 @@ public class Ocultarmensaje {
                 for (int i = 0; i < bits.length; i++) {
                     for (int j = 0; j < bits[i].length; j++) {
 
-                        int bit = bits[j][i];
                         if (x >= 0 && x < imagen.getWidth() && y >= 0 && y < imagen.getHeight()) {
                             int rgb = imagen.getRGB(x, y);
 
@@ -27,6 +29,8 @@ public class Ocultarmensaje {
                             int LSBazul = ((rgb & 254) | bits[i][3]);
 
                             rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
+
+                            String prueba = Integer.toBinaryString(rgb);
 
                             imagen.setRGB(x, y, rgb);
 
@@ -40,6 +44,13 @@ public class Ocultarmensaje {
                     }
                 }
             }
+        }
+
+        File imagenconsecreto = new File("imagenconsecreto.png");
+        try {
+            File codificado=new File(String.valueOf(ImageIO.write(imagen,"png",imagenconsecreto)));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -17,10 +17,10 @@ public class LSB {
 
                 int rgb = imagen.getRGB(x, y);
 
-                int LSBalpha = ((rgb >> 24) & 254);
-                int LSBrojo = ((rgb >> 16) & 254);
-                int LSBverde = ((rgb >> 8) & 254);
-                int LSBazul = (rgb & 254);
+                int LSBalpha = ((rgb >> 24) & 1);
+                int LSBrojo = ((rgb >> 16) & 1);
+                int LSBverde = ((rgb >> 8) & 1);
+                int LSBazul = (rgb & 1);
 
                 rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
                 imagen.setRGB(x, y, rgb);

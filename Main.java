@@ -21,9 +21,6 @@ public class Main {
         Mensaje mensaje1 = new Mensaje(mensaje);
         int[][] bits = mensaje1.operacion();
 
-        LSB lsb = new LSB(imagen);
-        imagen = lsb.OperacionLSB();
-
         Ocultarmensaje mensajeoculto = new Ocultarmensaje(imagen,bits);
         mensajeoculto.operacion();
 
