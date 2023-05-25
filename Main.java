@@ -23,7 +23,6 @@ public class Main {
 
         Ocultarmensaje mensajeoculto = new Ocultarmensaje(imagen,bits);
         mensajeoculto.operacion();
-        mensajeoculto.operacion2();
 
     }
 }

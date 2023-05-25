@@ -21,6 +21,7 @@ public class Ocultarmensaje {
                     for (int j = 0; j < bits[i].length; j++) {
 
                         if (x >= 0 && x < imagen.getWidth() && y >= 0 && y < imagen.getHeight()) {
+
                             int rgb = imagen.getRGB(x, y);
 
                             int LSBalpha = ((rgb >> 24 & 254) | bits[i][0]);
@@ -29,8 +30,6 @@ public class Ocultarmensaje {
                             int LSBazul = ((rgb & 254) | bits[i][3]);
 
                             rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
-
-                            String prueba = Integer.toBinaryString(rgb);
 
                             imagen.setRGB(x, y, rgb);
 
@@ -48,7 +47,7 @@ public class Ocultarmensaje {
 
         File imagenconsecreto = new File("imagenconsecreto.png");
         try {
-            File codificado = new File(String.valueOf(ImageIO.write(imagen, "png", imagenconsecreto)));
+            ImageIO.write(imagen, "png", imagenconsecreto);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

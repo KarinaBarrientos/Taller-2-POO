@@ -31,6 +31,17 @@ public class Mensaje {
                 }
             }
         }
+        System.out.println(bits[0][0]);
+        System.out.println(bits[0][1]);
+        System.out.println(bits[0][2]);
+        System.out.println(bits[0][3]);
+
+        System.out.println(bits[1][0]);
+        System.out.println(bits[1][1]);
+        System.out.println(bits[1][2]);
+        System.out.println(bits[1][3]);
+
+
         return bits;
     }
 }

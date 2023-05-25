@@ -17,6 +17,7 @@ public class LSB {
 
                 int rgb = imagen.getRGB(x, y);
 
+
                 int LSBalpha = ((rgb >> 24) & 1);
                 int LSBrojo = ((rgb >> 16) & 1);
                 int LSBverde = ((rgb >> 8) & 1);
