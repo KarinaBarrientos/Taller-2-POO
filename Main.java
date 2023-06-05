@@ -24,5 +24,8 @@ public class Main {
         Ocultarmensaje mensajeoculto = new Ocultarmensaje(imagen,bits);
         mensajeoculto.operacion();
 
+        LSB lsb = new LSB();
+        lsb.OperacionLSB();
+
     }
 }

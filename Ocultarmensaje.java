@@ -1,5 +1,4 @@
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -14,34 +13,60 @@ public class Ocultarmensaje {
     }
 
     public void operacion() {
+        int i = 0;
 
-        for (int y = 0; y < imagen.getHeight(); y++) {
-            for (int x = 0; x < imagen.getWidth(); x++) {
-                for (int i = 0; i < bits.length; i++) {
-                    for (int j = 0; j < bits[i].length; j++) {
+        for (int y = 0; y < 2; y++) {
+            for (int x = 0; x < 2; x++) {
 
-                        if (x >= 0 && x < imagen.getWidth() && y >= 0 && y < imagen.getHeight()) {
+                int yo = bits.length;
 
-                            int rgb = imagen.getRGB(x, y);
+                if (i > bits.length) {
 
-                            int LSBalpha = ((rgb >> 24 & 254) | bits[i][0]);
-                            int LSBrojo = ((rgb >> 16 & 254) | bits[i][1]);
-                            int LSBverde = ((rgb >> 8 & 254) | bits[i][2]);
-                            int LSBazul = ((rgb & 254) | bits[i][3]);
-
-                            rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
-
-                            imagen.setRGB(x, y, rgb);
-
-                            x++;
-
-                            if (x == imagen.getWidth()) {
-                                x = 0;
-                                y++;
-                            }
-                        }
-                    }
                 }
+
+                int rgb = imagen.getRGB(x, y);
+
+                int LSBalpha = ((rgb >> 24 & 254));
+                int LSBrojo = ((rgb >> 16 & 254));
+                int LSBverde = ((rgb >> 8 & 254));
+                int LSBazul = ((rgb & 254));
+
+                LSBalpha = LSBalpha | bits[0][i];
+                LSBrojo = LSBrojo | bits[1][i];
+                LSBverde = LSBverde | bits[2][i];
+                LSBazul = LSBazul | bits[3][i];
+
+
+                System.out.println("ii" + bits[0][i]);
+                System.out.println("ii" + bits[1][i]);
+                System.out.println("ii" + bits[2][i]);
+                System.out.println("ii" + bits[3][i]);
+
+                System.out.println(bits[0][i]);
+                System.out.println(bits[1][i]);
+                System.out.println(bits[2][i]);
+                System.out.println(bits[3][i]);
+
+                System.out.println(bits[0][i]);
+                System.out.println(bits[1][i]);
+                System.out.println(bits[2][i]);
+                System.out.println(bits[3][i]);
+
+                System.out.println(Integer.toBinaryString(LSBalpha));
+                System.out.println(Integer.toBinaryString(LSBrojo));
+                System.out.println(Integer.toBinaryString(LSBverde));
+                System.out.println(Integer.toBinaryString(LSBazul));
+
+
+                rgb = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
+
+                imagen.setRGB(x, y, rgb);
+
+                System.out.println("i: " + i);
+
+                i = i + 1;
+
+
             }
         }
 
@@ -51,5 +76,7 @@ public class Ocultarmensaje {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+
     }
 }

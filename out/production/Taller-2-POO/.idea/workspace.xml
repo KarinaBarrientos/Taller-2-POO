@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSB.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ocultarmensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ocultarmensaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,26 +128,5 @@
     <MESSAGE value="Extractor de LSB" />
     <MESSAGE value="procesamiento del mensaje" />
     <option name="LAST_COMMIT_MESSAGE" value="procesamiento del mensaje" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
