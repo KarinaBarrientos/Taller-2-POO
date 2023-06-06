@@ -9,7 +9,7 @@ public class Main {
 
         BufferedImage imagen;
         try {
-            imagen = ImageIO.read(new File("download.png"));
+            imagen = ImageIO.read(new File("pngegg.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

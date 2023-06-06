@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f1fc36e-e959-4694-ad36-1d179fb0210b" name="Changes" comment="procesamiento del mensaje">
+      <change afterPath="$PROJECT_DIR$/pngegg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LSB.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mensaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ocultarmensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ocultarmensaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +51,28 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\demis\OneDrive\Documentos\GitHub\Taller 2\Taller-2-POO" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="LSB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LSB" />
+      <module name="Taller-2-POO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Taller-2-POO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LSB" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684550495124</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="procesamiento del mensaje">
+      <created>1685985388062</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685985388062</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -134,44 +165,44 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mensaje.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
           <line>24</line>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="8" />
+          <line>26</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
           <line>33</line>
-          <option name="timeStamp" value="9" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
           <line>34</line>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mensaje.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Ocultarmensaje.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

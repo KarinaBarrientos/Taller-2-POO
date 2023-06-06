@@ -1,44 +1,50 @@
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class LSB {
 
-    BufferedImage imagen;
+    BufferedImage imagenconsecreto;
 
     {
         try {
-            imagen = ImageIO.read(new File("imagenconsecreto.png"));
+            imagenconsecreto = ImageIO.read(new File("imagenconsecreto.png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-
-    public LSB() {
-        this.imagen = imagen;
-    }
-
     public BufferedImage OperacionLSB() {
+        int i = 0;
 
-        for (int y = 0; y < 1; y++) {
-            for (int x = 0; x < 1; x++) {
+        System.out.println("descifrar");
 
-                int rgb = imagen.getRGB(x, y);
+        for (int y = 0; y < imagenconsecreto.getHeight(); y++) {
+            for (int x = 0; x < imagenconsecreto.getWidth(); ) {
 
-
-                int LSBalpha = ((rgb >> 24) & 254);
-                int LSBrojo = ((rgb >> 16) & 254);
-                int LSBverde = ((rgb >> 8) & 254);
-                int LSBazul = (rgb & 254);
+                int rgb = imagenconsecreto.getRGB(x, y);
 
 
+                System.out.println(imagenconsecreto.getRGB(0, 0));
+                System.out.println(imagenconsecreto.getRGB(1, 0));
 
+
+                int LSBalpha = ((rgb >> 24) & 1);
+                int LSBrojo = ((rgb >> 16) & 1);
+                int LSBverde = ((rgb >> 8) & 1);
+                int LSBazul = (rgb & 1);
+
+                i++;
+                x++;
 
             }
         }
-        return imagen;
+        return imagenconsecreto;
+    }
+
+    void armadoDeMensaje() {
+
+
     }
 }

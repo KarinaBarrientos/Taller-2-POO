@@ -2,7 +2,6 @@
 public class Mensaje {
     String mensaje;
     byte[] bytemensaje;
-    int filas;
     int columnas;
     int[][] bits;
 
@@ -29,23 +28,12 @@ public class Mensaje {
                 fila++;
 
 
-                if (fila > 3) {
+                if (fila > bits.length - 1) {
                     fila = 0;
                     columna++;
                 }
             }
         }
-
-        System.out.println("a " + bits[0][0]);
-        System.out.println("a " + bits[1][0]);
-        System.out.println("a " + bits[2][0]);
-        System.out.println("a " + bits[3][0]);
-
-        System.out.println("a " + bits[0][1]);
-        System.out.println("a " + bits[1][1]);
-        System.out.println("a " + bits[2][1]);
-        System.out.println("a " + bits[3][1]);
-
 
         return bits;
     }
