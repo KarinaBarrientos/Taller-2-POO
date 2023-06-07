@@ -13,50 +13,47 @@ public class Ocultarmensaje {
     }
 
     public void operacion() {
+
         int i = 0;
+
+        int transparencia = imagen.getTransparency();
+
+        if (transparencia == BufferedImage.TRANSLUCENT || transparencia == BufferedImage.BITMASK) {
+            System.out.println("La imagen tiene transparencia.");
+
+        } else {
+
+                BufferedImage imagenConAlpha = new BufferedImage(imagen.getWidth(), imagen.getHeight(), BufferedImage.TYPE_INT_ARGB);
+
+                imagenConAlpha.getGraphics().drawImage(imagen, 0, 0, null);
+
+                imagen = imagenConAlpha;
+
+        }
 
         for (int y = 0; y < imagen.getHeight(); y++) {
             for (int x = 0; x < imagen.getWidth(); ) {
-
                 if (i >= bits[0].length) {
                     break;
                 }
 
                 int rgb = imagen.getRGB(x, y);
 
-                System.out.println("rgb original: " + Integer.toBinaryString(rgb));
-
                 int LSBalpha = ((rgb >> 24 & 254));
-                int LSBrojo =  ((rgb >> 16 & 254));
+                int LSBrojo = ((rgb >> 16 & 254));
                 int LSBverde = ((rgb >> 8 & 254));
-                int LSBazul =  ((rgb & 254));
+                int LSBazul = ((rgb & 254));
 
                 LSBalpha = LSBalpha | bits[0][i];
-                LSBrojo  = LSBrojo  | bits[1][i];
+                LSBrojo = LSBrojo | bits[1][i];
                 LSBverde = LSBverde | bits[2][i];
-                LSBazul  = LSBazul  | bits[3][i];
-
-                /*
-
-                System.out.println(bits[0][i]);
-                System.out.println(bits[1][i]);
-                System.out.println(bits[2][i]);
-                System.out.println(bits[3][i]);
-
-                System.out.println("byte" + Integer.toBinaryString(LSBalpha));
-                System.out.println("byte" + Integer.toBinaryString(LSBrojo));
-                System.out.println("byte" + Integer.toBinaryString(LSBverde));
-                System.out.println("byte" + Integer.toBinaryString(LSBazul));
-
-                 */
+                LSBazul = LSBazul | bits[3][i];
 
                 int rgbmod = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
 
-                imagen.setRGB(x,y,rgbmod);
+                imagen.setRGB(x, y, rgbmod);
 
-                System.out.println("i: " + i);
-
-                i = i + 1;
+                i++;
                 x++;
 
             }
@@ -65,10 +62,9 @@ public class Ocultarmensaje {
         File archivoSalida = new File("imagenconsecreto.png");
         try {
             ImageIO.write(imagen, "png", archivoSalida);
+            System.out.println("Imagen modificada guardada correctamente.");
         } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            ex.printStackTrace();
         }
-
-        System.out.println("Imagen modificada guardada correctamente.");
     }
 }
