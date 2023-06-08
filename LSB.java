@@ -1,22 +1,25 @@
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class LSB {
 
-    private BufferedImage imagenconsecreto;
+    private BufferedImage imagen;
     private StringBuilder mensaje = new StringBuilder();
 
     public LSB(BufferedImage imagen) {
-        this.imagenconsecreto = imagen;
+        this.imagen = imagen;
     }
 
     public String OperacionLSB() {
 
         System.out.println("Descifrando mensaje oculto...");
 
-        for (int y = 0; y < imagenconsecreto.getHeight(); y++) {
-            for (int x = 0; x < imagenconsecreto.getWidth(); x++) {
+        for (int y = 0; y < imagen.getHeight(); y++) {
+            for (int x = 0; x < imagen.getWidth(); x++) {
 
-                int rgb = imagenconsecreto.getRGB(x, y);
+                int rgb = imagen.getRGB(x, y);
 
                 int LSBalpha = (rgb >> 24) & 1;
                 int LSBrojo = (rgb >> 16) & 1;
