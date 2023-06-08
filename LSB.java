@@ -37,11 +37,11 @@ public class LSB {
             }
         }
 
-        String mensajeExtraido = binaryToString(mensaje.toString());
+        String mensajeExtraido = binarioAString(mensaje.toString());
         System.out.println("Mensaje extraído: " + mensajeExtraido);
     }
 
-    private String binaryToString(String binary) {
+    private String binarioAString(String binary) {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < binary.length(); i += 8) {

@@ -1,4 +1,3 @@
-
 public class Mensaje {
     String mensaje;
     byte[] bytemensaje;
@@ -8,7 +7,7 @@ public class Mensaje {
     Mensaje(String mensaje) {
         this.mensaje = mensaje;
         this.bytemensaje = mensaje.getBytes();
-        this.columnas = (int) ((mensaje.length() * 8.0) / 4.0);
+        this.columnas = (int) (Math.ceil(mensaje.length() * 8.0) / 4.0);
         this.bits = new int[4][columnas];
     }
 
@@ -20,15 +19,12 @@ public class Mensaje {
             for (int i = 7; i >= 0; i--) {
 
                 int bit = (b >> i) & 1;
-
-                System.out.println("bit: " + bit);
-
                 bits[fila][columna] = bit;
 
                 fila++;
 
 
-                if (fila > bits.length - 1) {
+                if (fila > bits.length-1) {
                     fila = 0;
                     columna++;
                 }

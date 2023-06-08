@@ -23,11 +23,9 @@ public class Ocultarmensaje {
 
         } else {
 
-                BufferedImage imagenConAlpha = new BufferedImage(imagen.getWidth(), imagen.getHeight(), BufferedImage.TYPE_INT_ARGB);
-
-                imagenConAlpha.getGraphics().drawImage(imagen, 0, 0, null);
-
-                imagen = imagenConAlpha;
+            BufferedImage imagenConAlpha = new BufferedImage(imagen.getWidth(), imagen.getHeight(), BufferedImage.TYPE_INT_ARGB);
+            imagenConAlpha.getGraphics().drawImage(imagen, 0, 0, null);
+            imagen = imagenConAlpha;
 
         }
 
@@ -40,14 +38,14 @@ public class Ocultarmensaje {
                 int rgb = imagen.getRGB(x, y);
 
                 int LSBalpha = ((rgb >> 24 & 254));
-                int LSBrojo = ((rgb >> 16 & 254));
+                int LSBrojo  = ((rgb >> 16 & 254));
                 int LSBverde = ((rgb >> 8 & 254));
-                int LSBazul = ((rgb & 254));
+                int LSBazul  = ((rgb & 254));
 
                 LSBalpha = LSBalpha | bits[0][i];
-                LSBrojo = LSBrojo | bits[1][i];
+                LSBrojo  = LSBrojo  | bits[1][i];
                 LSBverde = LSBverde | bits[2][i];
-                LSBazul = LSBazul | bits[3][i];
+                LSBazul  = LSBazul  | bits[3][i];
 
                 int rgbmod = (LSBalpha << 24 | LSBrojo << 16) | (LSBverde << 8) | LSBazul;
 
