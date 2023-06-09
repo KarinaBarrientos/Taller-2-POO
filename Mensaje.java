@@ -7,6 +7,11 @@ public class Mensaje {
     int columnas;
     List<List<Integer>> bits;
 
+    /**
+     * Constructor de la clase Mensaje.
+     *
+     * @param mensaje El mensaje a ocultar en la imagen.
+     */
     Mensaje(String mensaje) {
         this.mensaje = mensaje;
         this.bytemensaje = mensaje.getBytes();
@@ -18,6 +23,11 @@ public class Mensaje {
         }
     }
 
+    /**
+     * Realiza la operación de conversión del mensaje en bytes a una lista de bits.
+     *
+     * @return La lista de bits generada a partir del mensaje.
+     */
     List<List<Integer>> operacion() {
         int fila = 0;
         int columna = 0;

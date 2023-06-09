@@ -1,17 +1,27 @@
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
+/**
+ * Clase que implementa la operación LSB (Least Significant Bit) para extraer un mensaje oculto de una imagen.
+ */
 public class LSB {
 
     private BufferedImage imagen;
     private StringBuilder mensaje = new StringBuilder();
 
+    /**
+     * Constructor de la clase LSB.
+     *
+     * @param imagen La imagen de la cual se extraerá el mensaje oculto.
+     */
     public LSB(BufferedImage imagen) {
         this.imagen = imagen;
     }
 
+    /**
+     * Realiza la operación LSB para extraer el mensaje oculto de la imagen.
+     *
+     * @return El mensaje oculto extraído de la imagen.
+     */
     public String OperacionLSB() {
 
         System.out.println("Descifrando mensaje oculto...");
@@ -38,11 +48,17 @@ public class LSB {
         return mensajeExtraido;
     }
 
-    private String binarioAString(String binary) {
+    /**
+     * Convierte una cadena de bits en una cadena de caracteres.
+     *
+     * @param binario La cadena de bits a convertir.
+     * @return La cadena de caracteres resultante.
+     */
+    private String binarioAString(String binario) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < binary.length(); i += 8) {
-            String byteString = binary.substring(i, i + 8);
+        for (int i = 0; i < binario.length(); i += 8) {
+            String byteString = binario.substring(i, i + 8);
             int decimal = Integer.parseInt(byteString, 2);
             char character = (char) decimal;
             sb.append(character);

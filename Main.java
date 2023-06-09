@@ -4,10 +4,20 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Clase principal que contiene el método de entrada para codificar y decodificar mensajes ocultos en imágenes.
+ */
 public class Main {
+
+    /**
+     * Método principal que maneja la codificación y decodificación de mensajes ocultos en imágenes.
+     *
+     * @param args Los argumentos de línea de comandos.
+     */
     public static void main(String[] args) {
+
         if (args.length < 2) {
-            System.out.println("Se requieren argumentos. Uso: java Main encode <mensaje> <ruta_imagen_entrada> <ruta_imagen_salida> o java Main decode <ruta_imagen>");
+            System.out.println("Se requieren argumentos. Uso: java Main codificar <mensaje> <ruta_imagen_entrada> <ruta_imagen_salida> o java Main decodificar <ruta_imagen>");
             return;
         }
 
@@ -15,7 +25,7 @@ public class Main {
 
         if (command.equals("codificar")) {
             if (args.length < 4) {
-                System.out.println("Se requieren argumentos. Uso: java Main encode <mensaje> <ruta_imagen_entrada> <ruta_imagen_salida>");
+                System.out.println("Se requieren argumentos. Uso: java Main codificar <mensaje> <ruta_imagen_entrada> <ruta_imagen_salida>");
                 return;
             }
 
@@ -24,27 +34,22 @@ public class Main {
             String outputImagePath = args[3];
 
             BufferedImage imagen;
+
             try {
                 imagen = ImageIO.read(new File(inputImagePath));
             } catch (IOException e) {
                 throw new RuntimeException("Error al leer la imagen de entrada: " + e.getMessage());
             }
 
-            Mensaje mensaje1 = new Mensaje(mensaje);
-            List<List<Integer>> bits = mensaje1.operacion();
+            Mensaje mensajeObjeto = new Mensaje(mensaje);
+            List<List<Integer>> bits = mensajeObjeto.operacion();
 
-            Ocultarmensaje mensajeoculto = new Ocultarmensaje(imagen, bits);
-            mensajeoculto.operacion();
+            OcultarMensaje mensajeOculto = new OcultarMensaje(imagen, bits);
+            mensajeOculto.operacion(outputImagePath);
 
-            try {
-                ImageIO.write(imagen, "png", new File(outputImagePath));
-                System.out.println("Imagen modificada guardada correctamente en " + outputImagePath);
-            } catch (IOException e) {
-                throw new RuntimeException("Error al guardar la imagen de salida: " + e.getMessage());
-            }
         } else if (command.equals("decodificar")) {
             if (args.length < 2) {
-                System.out.println("Se requiere un argumento. Uso: java Main decode <ruta_imagen>");
+                System.out.println("Se requiere un argumento. Uso: java Main decodificar <ruta_imagen>");
                 return;
             }
 
@@ -53,6 +58,7 @@ public class Main {
             BufferedImage imagen;
             try {
                 imagen = ImageIO.read(new File(inputImagePath));
+
             } catch (IOException e) {
                 throw new RuntimeException("Error al leer la imagen: " + e.getMessage());
             }

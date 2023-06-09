@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1fc36e-e959-4694-ad36-1d179fb0210b" name="Changes" comment="arreglos">
+    <list default="true" id="4f1fc36e-e959-4694-ad36-1d179fb0210b" name="Changes" comment="consola">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LSB.java" beforeDir="false" afterPath="$PROJECT_DIR$/LSB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ocultarmensaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ocultarmensaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Taller-2-POO/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686249302736</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="consola">
+      <created>1686251802816</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686251802816</updated>
+    </task>
+    <task id="LOCAL-00016" summary="consola">
+      <created>1686251908999</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686251908999</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +211,8 @@
     <MESSAGE value="Extractor de LSB" />
     <MESSAGE value="procesamiento del mensaje" />
     <MESSAGE value="arreglos" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglos" />
+    <MESSAGE value="consola" />
+    <option name="LAST_COMMIT_MESSAGE" value="consola" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
